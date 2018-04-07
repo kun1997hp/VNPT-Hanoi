@@ -1,0 +1,117 @@
+.page #primary-mono h1.entry-title {
+  color: black;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: left;
+  font-size: 25px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  position: relative;
+  @media screen and (max-width: 991px) {
+    margin-top: 20px;
+  }
+  span {
+    background: @background;
+    position: relative;
+    padding: 25px 15px;
+    padding-left: 0;
+    z-index: 1;
+  }
+  &:after {
+    content: "";
+    display: block;
+    width: 96%;
+    height: 11px;
+    background: @pattern;
+    border-top: none;
+    position: absolute;
+    left: 2%;
+    top: 27%;
+    z-index: 0;
+  }
+}
+
+.page #masthead .container {
+  border-bottom: solid 1px darken(@background, 5%);
+}
+
+.edit-link {
+  display: inline-block;
+  float: right;
+}
+.page-header {
+  margin-top: 0px;
+  border-bottom: none;
+  h1 {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: inline-block;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+  }
+}
+
+#primary-mono {
+  padding: 0 10px;
+  padding-left: 20px;
+  @media screen and (max-width:767px) {
+    padding-left: 10px;
+  }
+  h1.entry-title {
+    font-weight: 600;
+    color: darken(@top-bar,12%);
+    font-size: 36px;
+    margin-top: 0px;
+    padding: 2px 0px;
+    margin-bottom: 0px;
+  }
+  .entry-meta, .entry-footer {
+    font-size: 12px;
+    border-bottom: solid 1px #eee;
+    padding-bottom: 7px;
+    overflow: auto;
+    a {
+      color: @content;
+      text-decoration: underline;
+      &:hover {
+        color: @accent;
+      }
+    }
+  }
+  .entry-meta {
+    color: @accent;
+    display: inline-block;
+    padding: 2px 0px;
+    padding-bottom: 8px;
+    font-size: 13px;
+    border-bottom: none;
+    a {
+      color: @accent;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  .entry-footer {
+    border-top: solid 1px #eee;
+    padding-top: 7px;
+    margin-top: 25px;
+    .post-edit-link {
+      float: right;
+
+    }
+    .cat-links {
+      margin-right: 6px;
+    }
+  }
+  #featured-image {
+    border-top: solid 5px @s-accent;
+    border-bottom: solid 5px @s-accent;
+  }
+  .entry-content {
+    color: @content;
+    line-height: 1.7em;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,98 @@
+.toplevel_page_ZupportDesk #wpwrap {
+    width: 100%;
+    background-position: 55% 45%;
+	background-repeat: no-repeat;
+}
+#logo{width:70%;padding:10px 0;margin:5px 0;}
+#wpwrap{background-color:#fff;}
+#zupportform{padding:5px 0;border-top:2px solid #cfcfcf;}
+#forgetPassword{color:#000;font-weight:bold;}
+#signUp{color:#FF5E00;}
+.zupport-main-div{width:100%;float:left;min-height:550px;background-size:cover;}
+.zupport-main{
+    border-top: 3px solid #FF5E00;
+    border-bottom: 1px solid #cfcfcf;
+    border-left: 1px solid #cfcfcf;
+    border-right: 1px solid #cfcfcf;
+	border-radius:2px;
+    padding: 6px;
+    width: 40%;
+    margin: 10px auto;
+	background-color:#fff;
+	box-shadow: 0 2px 4px 0 #cfcfcf,0 2px 10px 0 #cfcfcf !important;
+}
+#CloseLogout{position:absolute;font-weight:bold;right:30%;color:#000;}
+form{text-align:left;min-height:40px;}
+.zupport-main-div a{color:#fff;text-decoration:none;}
+.zupport-main-div a:hover{color:#fff;text-decoration:none;}
+.zupport-main h1{border-bottom:2px solid #cfcfcf;margin:0 0 5px;padding:20px;}
+.full-width{width:100%;margin:10px;}
+.form-input{padding:5px 5px 5px 15px; border-radius:3px;}
+#zupport_select,#btn-login{padding:5px 20px;background-color:#FF5E00;color:#fff;border: 3px solid #FF5E00;border-radius:3px;cursor:pointer;}
+#zupport_select{float:right;margin-top:10px;margin-right:20px;}
+#zupport_cancel{margin-top:10px;padding:5px 20px;background-color:#000;color:#fff;border: 3px solid #000;border-radius:3px;cursor:pointer;}
+.text-right{text-align:right;}
+.text-left{text-align:left;}
+.text-center{text-align:center;}
+h1.widget-img{    
+    padding-left: 30px;
+    background-size: 22px 22px;
+    background-repeat: no-repeat;
+    background-position: 2px 19px;
+	font-size:1.3em;
+}
+h1.company-img{    
+    padding-left: 30px;
+    background-size: 22px 22px;
+    background-repeat: no-repeat;
+    background-position: 2px 19px;
+	font-size:1.3em;
+}
+.hide{display:none !important;}
+.show{display:block !important;}
+.zupport-error{padding:10px 0;border:1px solid #cfcfcf;color:#dc3232;border-left:5px solid #dc3232 !important;width:95%;}
+
+/* table css */
+#company-list-table tbody td,#company-list-table thead th,#company-list-table thead th:hover {
+	width:95%;
+}
+#company-list-table thead tr:hover{background-color:#cfcfcf;width:95%;border-radius:5px 5px 0 0;}
+ .zupport-main table {width: 95% !important;border-radius:5px;}
+ .zupport-main  tbody{border:2px solid #cfcfcf;border-radius:0 0 5px 5px;}
+ .zupport-main  thead{border-radius:5px 5px 0 0;}
+ .zupport-main  td:first-child {border-bottom:1px solid #cfcfcf;}
+ .zupport-main  td:last-child {border-left:1px solid #cfcfcf;border-bottom:1px solid #cfcfcf;}
+ .zupport-main  tr:hover{background-color:#f1f1f1;cursor: pointer;color:#000;}
+.zupport-main  thead,.zupport-main  tbody,.zupport-main  tr,.zupport-main  td,.zupport-main  th { display: block;}
+.zupport-main tr:after {
+	content: ' ';
+	display: block;
+	visibility: hidden;
+	clear: both;
+}
+.zupport-main  thead th {
+	height: 30px;
+}
+.zupport-main tbody {
+	max-height: 200px;
+	overflow-y: auto;
+	min-height: 200px;
+}
+.zupport-main  thead {
+	background-color:#cfcfcf;
+}
+.zupport-main  tbody td,.zupport-main  thead th {
+	width: 45%;
+	float: left;
+	text-align:left;
+	padding:5px;
+}
+#widget_table  tbody td,#widget_table  thead th {width: 95% !important;}
+.arrow-right {
+  background-color:#FF5E00 !important;color:#fff !important;
+}
+
+@media only screen and (max-width: 768px) {
+    .zupport-main{width:95%;margin:10px 0;}
+    #CloseLogout{right:5%;}
+}

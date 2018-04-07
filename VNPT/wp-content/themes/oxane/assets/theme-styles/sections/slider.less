@@ -1,0 +1,126 @@
+/* Post Thumbs Slider */
+#postthumb-slider {
+  overflow: visible;
+  .section-title {
+    margin-bottom: 25px;
+    font-size: 18px;
+  }
+  .thumbs {
+    position: relative;
+  }
+  .thumb {
+    margin-bottom: 25px;
+    padding-right: 11px;
+    cursor: pointer;
+    .transition(0.2s all ease);
+    &:hover {
+      filter: brightness(0.8);
+      -webkit-filter: brightness(0.8);
+    }
+    @media screen and (max-width: 767px) {
+      padding-right: 0px;
+    }
+  }
+  .thumb1 {
+    margin-top: 2px;
+  }
+  .arrowed {
+    position: relative;
+    .transition(0.4s all ease);
+    &:after {
+      content: "\f054";
+      font-family: "FontAwesome";
+      position: absolute;
+      right: -25px;
+      top: 50%;
+      display: block;
+      color: black;
+      .transform(translateY(-50%));
+      .transition(0.4s all ease);
+      font-size: 18px;
+      color: fade(@content,50%);
+    }
+    &:hover {
+      &:after {
+        .transform(translateY(-50%) translateX(-5px));
+      }
+    }
+  }
+  .slides {
+    position: relative;
+    perspective: 1500;
+    -webkit-perspective: 1500;
+    /*place a dummy image here to account for responsiveness */
+    .slide {
+      position: absolute;
+      left: 15px;
+      top: 0;
+      display: block;
+      transform-origin: left;
+      .transition(.8s all ease-out);
+    }
+    .slide1 {
+      position: relative;
+      left: 0;
+    }
+    .not-visible {
+      opacity: 0;
+      .transform( translateX(-20px) scale(0.95) );
+    }
+    .visible {
+      opacity: 1;
+      .transform( translateX(0px) scale(1) );
+    }
+    .post-details {
+      position: absolute;
+      top: 0;
+      left: 15px;
+      bottom: 0;
+      padding: 10px 20px;
+      background: fade(@accent,80%);
+      color: white;
+      max-width: 230px;
+      h1 {
+        font-size: 24px;
+        position: relative;
+        padding-left: 20px;
+        &:before {
+          display: block;
+          content: "";
+          width: 1px;
+          height: 102%;
+          background: fade(@onaccent,50%);
+          position: absolute;
+          left: 5px;;
+        }
+      }
+    }
+
+  }
+  @media screen and (max-width: 767px) {
+    .arrowed {
+      &:after {
+        display: none;
+        content: "";
+      }
+    }
+    .thumbs .thumb {
+      width: 25%;
+      float: left;
+      padding: 15px;
+      padding-right: 0px;
+      margin-bottom: 2px;
+    }
+    .slides .post-details {
+      max-width: 130px;
+      h1 {
+        font-size: 12px;
+        padding-left: 5px;
+        &:before {
+          left: -5px;
+        }
+      }
+    }
+  }
+
+}

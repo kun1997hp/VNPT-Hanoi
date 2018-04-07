@@ -1,0 +1,98 @@
+.body-font {
+  font-family: "Open Sans", sans-serif;
+}
+.title-font {
+  font-family: "HIND", sans-serif;
+}
+
+
+
+body {
+  .body-font;
+  background: @background;
+  word-wrap: break-word;
+}
+.mega-container {
+  background: white;
+  max-width: 1170px;
+  margin: auto;
+  margin-top: 20px;
+  overflow: visible;
+}
+a {
+  color: @accent;
+  cursor: pointer;
+  &:hover {
+    text-decoration: none;
+    color: @accent;
+  }
+}
+.container {
+  margin: auto;
+  max-width: 1100px;
+}
+
+
+#content {
+  margin-top: 30px;
+  padding-top: 30px;
+}
+#main {
+  overflow: auto;
+  clear: both;
+}
+#primary .section-title span {
+  padding-left: 0;
+}
+
+.centered {
+  text-align:center;
+}
+
+/* section titles */
+.section-title {
+  color: @content;
+  text-transform: uppercase;
+  font-weight: normal;
+  text-align: left;
+  font-size: 18px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  position: relative;
+  z-index: 3;
+  span:first-letter {
+    background: @accent;
+    border-radius: 50%;
+    padding: 3px 10px;
+    color: @onaccent;
+    font-weight: bolder;
+    margin-right: 2px;
+
+  }
+  @media screen and (max-width: 991px) {
+    margin-top: 20px;
+  }
+  span {
+    background: @background;
+    position: relative;
+    padding: 5px 8px;
+    padding-right: 15px;
+    z-index: 1;
+    display: inline-block;
+  }
+  &:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: fade(@content,20%);;
+    position: absolute;
+    left: 0%;
+    top: 45%;
+    z-index: 0;
+    @media screen and (max-width: 767px) {
+      width: 80%;
+      left: 10%;
+    }
+  }
+}

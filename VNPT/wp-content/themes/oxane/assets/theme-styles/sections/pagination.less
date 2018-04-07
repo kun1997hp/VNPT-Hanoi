@@ -1,0 +1,40 @@
+/* --------------- pagination ------------ */
+.pagination {
+  margin: 20px 0;
+  padding-top: 25px;
+  text-align: center;
+  width: 100%;
+  clear: both;
+  .nav-links {
+    text-align: center;
+  }
+}
+.pagination .page-numbers {
+  padding: 4px 12px;
+  line-height: 20px;
+  text-decoration: none;
+  border-radius: 3px;
+  margin-right: 5px;
+  background-color: @background;
+  border: 1px solid @accent;
+  display: inline-block;
+  color: @accent;
+  font-weight: lighter;
+  .transition(0.4s all ease);
+  &:hover {
+    background: @accent;
+    color: @onaccent;
+  }
+
+}
+.pagination {
+  .current, .dots {
+    background: darken(@background, 2%);
+    color: @accent;
+    pointer-events: none;
+  }
+  .current {
+    background: @accent;
+    color: @onaccent;
+  }
+}

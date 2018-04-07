@@ -1,0 +1,62 @@
+.oxane {
+  border-bottom: none;
+  position: relative;
+  overflow: auto;
+  -webkit-perspective: 500;
+  perspective: 500;
+  min-height: 144px;
+  .featured-thumb {
+    background: @pattern repeat;
+    border: solid 6px darken(@s-accent,0%);
+    border-radius: 1px;
+    padding: 0px;
+    position: relative;
+    box-shadow: 0px 7px 2px -6px fade(black, 30%);
+    .transition(0.4s all ease);
+    transform-origin: bottom;
+    .postedon {
+      position: absolute;
+      background: fade(black,50%);
+      a { color: darken(@background,0%); }
+      position: absolute;
+      padding: 3px;
+      font-size: 12px;
+      left: 50%;
+      bottom: 5px;
+      font-weight: lighter;
+      .transform(translateX(-50%));
+
+    }
+    &:hover {
+      box-shadow: 0px 6px 2px -6px fade(@top-bar, 100%);
+      .transform(translateY(4px) rotateX(15deg));
+      img {
+        .transform(none);
+      }
+
+    }
+  }
+  .out-thumb {
+    position: relative;
+    margin-top: 25px;
+    text-align: center;
+    h1.entry-title {
+      font-size: 14px;
+      a {
+        color: lighten(black, 10%);
+      }
+    }
+    &:after {
+      content: "";
+      width: 24%;
+      left: 38%;
+      height: 2px;
+      text-align: center;
+      background: @accent;
+      position: absolute;
+      top: -10px;
+      margin-bottom: 15px;
+    }
+  }
+
+}

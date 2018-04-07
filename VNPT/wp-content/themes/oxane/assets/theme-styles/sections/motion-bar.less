@@ -1,0 +1,84 @@
+#motion-bar {
+  background: @top-bar;
+  padding: 0px 10px;
+  overflow: hidden;
+  .m-container{
+    position:relative;
+  }
+  .motion-head{
+    float:left;
+    z-index:99;
+    background:@onaccent;
+    padding-top: 15px;
+    padding-bottom: 16px;
+    width: 205px;
+    display: inline-block;
+    position:relative;
+    &:before {
+      content: "";
+      position: absolute;
+      height: 51px;
+      width: 1000px;
+      background: #fff;
+      top: 0;
+      left: -1000px;
+    }
+    &:after {
+      content: "";
+      height: 0px;
+      width: 0px;
+      position: absolute;
+      border: solid 45px transparent;
+      border-right-color: #fff;
+      top: -45px;
+      right: -45px;
+      transform: rotate(45deg);
+    }
+    h4 {
+      margin:0;
+      color:@accent;
+    }
+  }
+  .motion-content {
+    float:right;
+    padding:3px 3%;
+    position:absolute;
+    padding-top:10px;
+    left:0;
+    right:0;
+    #m-ticker{
+      color:@onaccent;
+      font-size:15px!important;
+      font-weight: 600;
+      z-index:9;
+      padding-top:12px;
+      height: 44px;
+      width: 420px;
+      overflow: hidden;
+      position: relative;
+      li {
+        i{
+          padding:0 8px 0 10px;
+          color:@onaccent;
+        }
+        a {
+          color:@onaccent;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 670px) {
+    .motion-head{
+      width: 100%;
+      border-bottom:3px solid @top-bar;
+      text-align:center;
+      &:before, &:after {
+        display: none;
+      }
+    }
+    .motion-content{
+      top: 54px;
+      padding-top: 0;
+    }
+  }
+}
